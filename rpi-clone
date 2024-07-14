@@ -80,8 +80,8 @@ done
 
 if [ "$need_packages" != "" ]
 then
-	confirm "Do you want to apt-get install the packages?" "abort"
-	apt-get install -y --no-install-recommends $need_packages
+	confirm "Do you want to pacman -Syu the packages?" "abort"
+	pacman -Syu --noconfirm $need_packages
 fi
 
 clone=/mnt/clone
